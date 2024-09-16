@@ -1,4 +1,4 @@
-# PvZ Integrated Mod 自定义关卡 - 快速开始 0.4.2
+# PvZ Integrated Mod 自定义关卡 - 快速开始 0.4.3
 
 ```json
 {
@@ -17,7 +17,7 @@
 ## 必要准备
 
 1. 了解Json格式以及基础的计算机知识(~~至少会编辑保存文件~~)
-2. 使用Integrated 0.4.2版本
+2. 使用Integrated 0.4.3版本
 
 ## 安装
 

@@ -1,4 +1,4 @@
-# 组件文档 0.4.2
+# 组件文档 0.4.3
 
 ## 目录
 
@@ -18,6 +18,7 @@
   - [SpawnFog 组件](#spawnfog-组件)
   - [SpawnGraveStone 组件](#spawngravestone-组件)
   - [VaseLevel 组件](#vaselevel-组件)
+  - [Tool 组件](#tool-组件)
 
 ---
 
@@ -46,6 +47,9 @@
 - **初始波数 (StartingWave)**: `int`, 默认值: `0`，关卡开始时的初始僵尸波数。
 - **初始出怪等待时间 (StartingTime)**: `int`, 默认值: `1800`，游戏开始时出怪的等待时间。
 - **可出现的僵尸 (AllowedZombies)**: `List<ZombieType>`, 默认值: `null`，本关卡允许出现的僵尸类型。
+- **是否出现旗帜僵尸 (SpawnFlagZombie)**: `boolean`, 默认值: `true`，是否允许一大波僵尸出现时自动刷出旗帜僵尸。
+- **最大刷出普通僵尸数 (MaxPlainZombiesPerFlag)**: `int`, 默认值: `8`，一大波僵尸强制出现普通僵尸的最大数量。
+- **背景音乐种类 (MusicType)**: `int`, 默认值: `-1`，背景音乐种类，-1为默认，0为不播放。
 
 ---
 
@@ -184,5 +188,17 @@
 - **出现的僵尸列表 (ZombieVases)**: `List<ZombieType>`, 默认值: `[]`，关卡中僵尸罐子列表。
 - **必出植物的罐子数 (NumPlantVases)**: `int`, 默认值: `3`，关卡中必定包含植物的罐子数。
 - **必出僵尸的罐子数 (NumZombieVases)**: `int`, 默认值: `0`，关卡中必定包含僵尸的罐子数。
+
+---
+
+## Tool 组件
+
+此组件代表关卡道具是否可用。
+
+- **是否出现铲子 (ShowShovel)**: `boolean`, 默认值: `true`，关卡内是否显示铲子。
+- **是否出现锤子 (ShowMallet)**: `boolean`, 默认值: `false`，关卡内是否显示锤子。
+- **是否出现阳光500 (ShowGoldFinger1)**: `boolean`, 默认值: `false`，关卡内是否显示阳光500道具。
+- **是否出现樱桃风雷 (ShowGoldFinger2)**: `boolean`, 默认值: `false`，关卡内是否显示樱桃风雷道具。
+- **是否出现极速冷却 (ShowGoldFinger3)**: `boolean`, 默认值: `false`，关卡内是否显示极速冷却道具。
 
 ---
