@@ -117,6 +117,8 @@
     - **ZombieValue**: `int`, 僵尸点数。
     - **FirstAllowedWave**: `int`, 僵尸首次出现的波数，从0开始计算。
     - **PickWeight**: `int`, 僵尸出现权重。
+    - **CanGoInPool**: `bool`, 是否可在泳池出现。
+    - **CanGoOnHighGround**: `bool`, 是否可在高地出现。
 
 ### 例子
 
