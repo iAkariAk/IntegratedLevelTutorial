@@ -55,7 +55,7 @@ ID,SeedType,Description
 53,SeedType.TimeStopper,时间静止器
 54,SeedType.IcebergLettuce,冰生菜投手
 55,SeedType.CherryHoverBomb,悬浮樱桃炸弹
-56,SeedType.None,待定
+56,SeedType.Stinger,毒刺
 57,SeedType.Duplicator,循环复制器
 58,SeedType.ChinaFlowerpot,瓷花盆
 59,SeedType.Gourd,火葫芦
