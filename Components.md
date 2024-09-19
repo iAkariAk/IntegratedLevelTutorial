@@ -1,4 +1,4 @@
-# 组件文档 0.4.3 & 0.4.4
+# 组件文档 0.4.5
 
 ## 目录
 
@@ -28,7 +28,8 @@
 
 - **初始出怪点数 (StartingPoints)**: `int`, 默认值: `1`，出怪时的初始点数。
 - **出怪点数增速 (PointIncrementPerWave)**: `float`, 默认值: `0.333334`，每一波僵尸后的出怪点数增加量。
-- **一大波僵尸时出怪点数倍率 (FlagPointMultiplier)**: `float`, 默认值: `2.5`，一大波僵尸时的出怪点数乘数。
+- **出怪点数倍率 (PointMultiplier)**: `float`, 默认值: `1.0`，出怪点数倍率。
+- **一大波僵尸时出怪点数倍率 (FlagPointMultiplier)**: `float`, 默认值: `2.5`，一大波僵尸时的出怪点数倍率，注意刷新一大波僵尸时PointMultiplier和FlagPointMultiplier是同时生效的。
 
 ---
 
@@ -110,15 +111,15 @@
 - **僵尸属性列表 (Properties)**: `List<ZombieProperty>`, 默认值: `[]`，需要特殊指定属性的僵尸列表。
   - **僵尸属性 (ZombieProperty)**:
     - **ZombieType**: `int`, 必选值，僵尸类型。
-    - **BodyHealth**: `int`, 僵尸本体血量。
-    - **HelmHealth**: `int`, 僵尸头饰血量。
-    - **ShieldHealth**: `int`, 僵尸手持物血量。
-    - **FlyingHealth**: `int`, 僵尸飞行物血量。
-    - **ZombieValue**: `int`, 僵尸点数。
-    - **FirstAllowedWave**: `int`, 僵尸首次出现的波数，从0开始计算。
-    - **PickWeight**: `int`, 僵尸出现权重。
-    - **CanGoInPool**: `bool`, 是否可在泳池出现。
-    - **CanGoOnHighGround**: `bool`, 是否可在高地出现。
+    - **BodyHealth**: `int?`, 僵尸本体血量。
+    - **HelmHealth**: `int?`, 僵尸头饰血量。
+    - **ShieldHealth**: `int?`, 僵尸手持物血量。
+    - **FlyingHealth**: `int?`, 僵尸飞行物血量。
+    - **ZombieValue**: `int?`, 僵尸点数。
+    - **FirstAllowedWave**: `int?`, 僵尸首次出现的波数，从0开始计算。
+    - **PickWeight**: `int?`, 僵尸出现权重。
+    - **CanGoInPool**: `bool?`, 是否可在泳池出现。
+    - **CanGoOnHighGround**: `bool?`, 是否可在高地出现。
 
 ### 例子
 
@@ -156,6 +157,8 @@
 - **禁止选择的卡片列表 (BannedCards)**: `List<int>`, 默认值: `null`，被禁止选择的卡片列表，如`[0,1,2]`代表禁止选卡豌豆射手，向日葵，樱桃炸弹。
 - **锁定选择的卡片列表 (LockedCards)**: `List<int>`, 默认值: `null`，被锁定选择的卡片列表，如`[0,1,2]`代表锁定选卡豌豆射手，向日葵，樱桃炸弹。
 - **是否需要手动选卡 (UserChoose)**: `bool`, 默认值: `true`，是否需要玩家手动选卡。
+- **是否天降阳光 (SpawnSunFromSky)**: `bool?`, 默认值: `null`，是否需要天降阳光，为null代表跟随默认。
+- **是否反转禁用植物 (ReverseBanning)**: `bool`, 默认值: `false`，是否需要将设置的禁用植物变为可用植物，为true代表BannedCards里所有植物可用且BannedCards未指定的所有植物不可用。
 
 ---
 

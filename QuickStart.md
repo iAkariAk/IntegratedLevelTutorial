@@ -1,4 +1,4 @@
-# PvZ Integrated Mod 自定义关卡 - 快速开始 0.4.3 & 0.4.4
+# PvZ Integrated Mod 自定义关卡 - 快速开始 0.4.5
 
 ```json
 {
@@ -17,7 +17,7 @@
 ## 必要准备
 
 1. 了解Json格式以及基础的计算机知识(~~至少会编辑保存文件~~)
-2. 使用Integrated 0.4.3或0.4.4版本
+2. 使用Integrated 0.4.5版本
 
 ## 安装
 
@@ -53,17 +53,17 @@
             "Creator":"Akari",
             "Background": 1,
             "InitPlantColumn": 0,
-            "#InitPlantColumn": "初始种植花盆, 荷叶的到n列. n=0则不种植"
+            "#InitPlantColumn": "初始种植花盆, 荷叶的到n列. n=0则不种植",
             "EasyUpgrade": false, 
             "NumWaves": 10, 
-            "#NumWaves": "波数"
+            "#NumWaves": "波数",
             "WavesPerFlag": 5, 
-            "#WavesPerFlag": "每5波算一个旗帜 第5, 10波是旗帜"
+            "#WavesPerFlag": "每5波算一个旗帜 第5, 10波是旗帜",
             "StartingWave": 1, 
-            "#StartingWave": "初始波数"
+            "#StartingWave": "初始波数",
             "StartingTime": 2400, 
-            "#StartingTime": "第一波延时"
-            "AllowedZombies": [0, 1, 2, 3, 4, 23]
+            "#StartingTime": "第一波延时",
+            "AllowedZombies": [0, 1, 2, 3, 4, 23],
             "#AllowedZombies": "允许的僵尸 [普通僵尸, 旗帜僵尸, 路障僵尸, 撑杆僵尸, 铁桶僵尸, 巨人僵尸] 参考ZombieType.txt"
         }
     ]
