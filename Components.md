@@ -19,6 +19,9 @@
   - [SpawnGraveStone 组件](#spawngravestone-组件)
   - [VaseLevel 组件](#vaselevel-组件)
   - [Tool 组件](#tool-组件)
+  - [SpawnSkySun 组件](#spawnskysun-组件)
+  - [InvisibleZombie 组件](#invisiblezombie-组件)
+  - [RainingSeeds 组件](#rainingseeds-组件)
 
 ---
 
@@ -227,5 +230,14 @@
 - **可出现的植物和权重 (AllowedPlants)**: `List<(int, int)>`, 默认值: `[]`，可以出现的植物及其权重，如`[[0,30],[2,15]]`代表可出现豌豆射手（权重30）和樱桃炸弹（权重15）。
 - **最小准备时间 (MinPrepareTime)**: `int`, 默认值: `500`，掉落卡片间隔时间最小值，每一次会在最小值和最大值之间随机生成间隔时间。
 - **最大准备时间 (MaxPrepareTime)**: `int`, 默认值: `1000`，掉落卡片间隔时间最大值，每一次会在最小值和最大值之间随机生成间隔时间。
+
+---
+
+## Weather 组件
+
+此组件代表关卡会出现天气。
+
+- **是否下雨 (HasRain)**: `bool`, 默认值: `false`，关卡内是否下雨。
+- **是否打雷 (HasStorm)**: `bool`, 默认值: `false`，关卡内是否打雷，值为`true`时不可与`RainingSeeds`或`VaseLevel`组件同时存在。
 
 ---
