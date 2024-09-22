@@ -13,7 +13,7 @@
   - [ManualZombiePoint 组件](#manualzombiepoint-组件)
   - [MustHaveZombie 组件](#musthavezombie-组件)
   - [OverrideZombieProperty 组件](#overridezombieproperty-组件)
-    - [例子](#例子)
+    - [例子](#overridezombieproperty-例子)
   - [SeedBank 组件](#seedbank-组件)
   - [SpawnFog 组件](#spawnfog-组件)
   - [SpawnGraveStone 组件](#spawngravestone-组件)
@@ -22,6 +22,8 @@
   - [SpawnSkySun 组件](#spawnskysun-组件)
   - [InvisibleZombie 组件](#invisiblezombie-组件)
   - [RainingSeeds 组件](#rainingseeds-组件)
+  - [OverrideProjectileProperty 组件](#overrideprojectileproperty-组件)
+    - [例子](#overrideprojectileproperty-例子)
 
 ---
 
@@ -122,7 +124,7 @@
     - **CanGoInPool**: `bool?`, 是否可在泳池出现。
     - **CanGoOnHighGround**: `bool?`, 是否可在高地出现。
 
-### 例子
+### OverrideZombieProperty 例子
 
 下述示例作用是
 1. 设置渔夫僵尸血量为6000
@@ -239,5 +241,36 @@
 
 - **是否下雨 (HasRain)**: `bool`, 默认值: `false`，关卡内是否下雨。
 - **是否打雷 (HasStorm)**: `bool`, 默认值: `false`，关卡内是否打雷，值为`true`时不可与`RainingSeeds`或`VaseLevel`组件同时存在。
+
+---
+
+## OverrideProjectileProperty 组件
+
+此组件代表关卡拥有需要特殊指定属性的子弹。
+
+- **是否允许僵尸豌豆子弹攻击花盆 (AllowZombiePeaAttackFlowerPot)**: `bool?`, 默认值: `null`，是否允许僵尸豌豆子弹和僵尸火焰豌豆子弹攻击花盆和瓷花盆。
+- **子弹属性列表 (Properties)**: `List<ProjectileProperty>`, 默认值: `[]`，需要特殊指定属性的子弹列表。
+  - **子弹属性 (ProjectileProperty)**:
+    - **ProjectileType**: `int`, 必选值，子弹类型。
+    - **Damage**: `int?`, 子弹伤害。
+
+### OverrideProjectileProperty 例子
+
+下述示例作用是
+1. 设置僵尸豌豆子弹伤害为300
+2. 设置僵尸豌豆子弹不可攻击花盆
+
+```json
+{
+  "Type": "OverrideProjectileProperty",
+  "AllowZombiePeaAttackFlowerPot": false,
+  "Properties": [
+    {
+      "ProjectileType":13,
+      "Damage":300
+    }
+  ]
+}
+```
 
 ---
