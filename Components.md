@@ -22,6 +22,7 @@
   - [SpawnSkySun 组件](#spawnskysun-组件)
   - [InvisibleZombie 组件](#invisiblezombie-组件)
   - [RainingSeeds 组件](#rainingseeds-组件)
+  - [Weather 组件](#weather-组件)
   - [OverrideProjectileProperty 组件](#overrideprojectileproperty-组件)
     - [例子](#overrideprojectileproperty-例子)
 
